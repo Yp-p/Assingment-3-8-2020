@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smalltext">11sp</dimen>
+    <dimen name="largeText">15sp</dimen>
+    <dimen name="smallText13">13sp</dimen>
+    <dimen name="Delsmall12">12sp</dimen>
+    <dimen name="delsize13">13sp</dimen>
+    <dimen name="delsize15">15sp</dimen>
+    <dimen name="missionSIze">13sp</dimen>
+    <dimen name="money15">15sp</dimen>
+    <dimen name="money12">12sp</dimen>
+    <dimen name="moneyIconsize">20dp</dimen>
+</resources>

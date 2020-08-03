@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1BEBE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrayLight"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Package &amp; Shipping"
+        android:textColor="#000000"
+        android:textSize="@dimen/largeText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/boxs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayLight">
+
+            <ImageView
+                android:id="@+id/box"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingVertical="20dp"
+                android:src="@drawable/ic_box"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detil"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/box"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="6dp"
+                    app:layout_constraintBottom_toTopOf="@id/kg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread_inside">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.50 kg"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/largeText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="weight/piece"
+                        android:textSize="@dimen/smalltext" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="6dp"
+                    app:layout_constraintBottom_toTopOf="@id/days"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/kg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20cm * 15 cm *10cm"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/largeText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="size/piece"
+                        android:textSize="@dimen/smalltext" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cm">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ships out within 5 days"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/largeText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Processing Time"
+                        android:textSize="@dimen/smalltext" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ShipAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/boxs">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingVertical="10dp"
+                android:text="Ship Address"
+                android:textSize="@dimen/largeText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/forArr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/for_arrow"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ShipAdd"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-59dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/deltitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Delevery Method"
+                    android:textSize="@dimen/largeText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/deltitle">
+
+                    <TextView
+                        android:id="@+id/d1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery \n Time"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/d2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/d2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cost"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="4"
+                        app:layout_constraintLeft_toRightOf="@id/d1"
+                        app:layout_constraintRight_toLeftOf="@id/d3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/d3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Tracking Carrier"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="10"
+                        app:layout_constraintLeft_toRightOf="@id/d2"
+                        app:layout_constraintRight_toLeftOf="@id/none"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/none"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintHorizontal_weight="2"
+                        app:layout_constraintLeft_toRightOf="@id/d3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintRight_toLeftOf="@id/d3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/d4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:paddingBottom="20dp"
+                        android:text="8-15 Days"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/d5"
+                        app:layout_constraintTop_toBottomOf="@id/d1"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/d5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ks- 5,000"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintBaseline_toBaselineOf="@id/d4"
+                        app:layout_constraintHorizontal_weight="4"
+                        app:layout_constraintLeft_toRightOf="@id/d4"
+                        app:layout_constraintRight_toLeftOf="@id/d6"
+                        app:layout_constraintTop_toBottomOf="@id/d1" />
+
+                    <TextView
+                        android:id="@+id/d6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="MGL Delivery"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintBaseline_toBaselineOf="@id/d4"
+                        app:layout_constraintHorizontal_weight="10"
+                        app:layout_constraintLeft_toRightOf="@id/d5"
+                        app:layout_constraintRight_toRightOf="@id/d7"
+                        app:layout_constraintTop_toBottomOf="@id/d1" />
+
+                    <RadioButton
+                        android:id="@+id/d7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBaseline_toBaselineOf="@id/d4"
+                        app:layout_constraintHorizontal_weight="2"
+                        app:layout_constraintLeft_toRightOf="@id/d6"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/d1" />
+
+                    <TextView
+                        android:id="@+id/d8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="5-10 Days"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/d9"
+                        app:layout_constraintTop_toBottomOf="@id/d4" />
+
+                    <TextView
+                        android:id="@+id/d9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ks- 3200"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="4"
+                        app:layout_constraintLeft_toRightOf="@id/d8"
+                        app:layout_constraintRight_toLeftOf="@id/d10"
+                        app:layout_constraintTop_toBottomOf="@id/d4" />
+
+                    <TextView
+                        android:id="@+id/d10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="MGL Delivery"
+                        android:textSize="@dimen/smalltext"
+                        app:layout_constraintHorizontal_weight="10"
+                        app:layout_constraintLeft_toRightOf="@id/d9"
+                        app:layout_constraintRight_toRightOf="@id/d11"
+                        app:layout_constraintTop_toBottomOf="@id/d4" />
+
+                    <RadioButton
+                        android:id="@+id/d11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintHorizontal_weight="2"
+                        app:layout_constraintLeft_toRightOf="@id/d10"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/d4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:gravity="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dTime">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="#FA0101"
+                android:text="Apply"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
